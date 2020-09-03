@@ -3,8 +3,9 @@ import {isAuth} from '../actions/auth'
 import Router from 'next/router'
 import { ThemeProvider } from '@material-ui/styles';
 import theme from '../theme'
-import Navbar from './navbar';
-const Layout = ({children}) => {
+import ScrollableTabsButtonForce from './navBarComponents/navtabs'
+
+const Layout = (props) => {
     useEffect(()=>{
         !isAuth()&& Router.push('/');
       },[]);
@@ -15,8 +16,8 @@ const Layout = ({children}) => {
             background-color: #001935;
         }
         `}</style>
-    <Navbar/>
-    {children}
+    <ScrollableTabsButtonForce TabValue={props.TabValue}/>
+    {props.children}
     </ThemeProvider>
     
     )

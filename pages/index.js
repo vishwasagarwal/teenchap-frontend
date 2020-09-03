@@ -7,10 +7,9 @@ import Router from 'next/router'
 
 const Index = () => {
     useEffect(()=>{
-    !isAuth()&& Router.push();
+    isAuth()&& Router.push('/Dashboard');
     },[]);
-    return(
-         
+    return(         
     <ThemeProvider theme={theme}>
         <style jsx global>{`
         body {

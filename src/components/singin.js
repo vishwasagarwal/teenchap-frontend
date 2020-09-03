@@ -77,7 +77,7 @@ const SignupForm = (props) => {
           } else {
             console.log(data);
             autheticate(data,()=>{
-              Router.push('/dashboard');
+              Router.push('/Dashboard');
               console.log('hello'+data.user.name)
             })  
               

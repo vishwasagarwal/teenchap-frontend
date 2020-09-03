@@ -34,14 +34,10 @@ const mystyle = makeStyles((theme)=>({
         background:'rgba(0,0,0,0)',
         marginLeft:'auto',
         marginRight:'auto',
-        width:'45vw',
+        width:'40vw',
         [theme.breakpoints.down('sm')]:{
           width:'80vw'
         }
-    },
-    innersurface:{
-     
-
     },
     buttonGroup:{
         display: 'flex',
@@ -152,10 +148,10 @@ function CreateBlog(props,{router}){
                   <Paper elevation={7}>
                   <SunEditor placeholder="Start Writing Here!" style={{borderRadius:"7px"}} setContents={body}
                   setOptions={{
-                     height : 'auto',
+                    mode:'balloon-always',
+                    height : 'auto',
                     buttonList: [
                       // default
-
                       [':p-More Paragraph-default.more_paragraph', 'font', 'fontSize', 'formatBlock', 'paragraphStyle', 'blockquote'],
                       [':t-More Text-default.more_text','bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
                       ['fontColor', 'hiliteColor', 'textStyle'],
@@ -214,7 +210,7 @@ function CreateBlog(props,{router}){
           <Grid item xs>
           <Paper elevation={10} className={classes.surface}>
             {CreateblogForm()}
-          <Paper className={classes.innersurface}>
+          <Paper>
             <ServerAutoSuggest handleTags={handletag}/>
           </Paper>
             <ImageUpload uploadpic={handlephoto}/>

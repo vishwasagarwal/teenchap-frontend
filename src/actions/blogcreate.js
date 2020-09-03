@@ -13,3 +13,14 @@ export const createBlog = (blog, token) =>{
         return response.json();
     }).catch(err => console.log(err))
 }
+
+export const listofBlogs = () =>{
+    return fetch(`${API}/blogs`,{
+        method:'GET',
+        headers:{
+            Accept:'application/json',
+        },
+    }).then(response =>{
+        return response.json();
+    }).catch(err => console.log(err))
+}

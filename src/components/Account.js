@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     menu: {
         width: '175px',
         height: "80vh",
-        background: '#00B8FF',
+        background: theme.palette.primary.light,
         color: '#001935'
     }
 }));

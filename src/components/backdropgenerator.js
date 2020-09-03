@@ -1,8 +1,9 @@
 import Backdrop from '@material-ui/core/Backdrop';
-import CreateBlog from '../components/crud/BlogCreate';
+import CreateBlog from './crud/BlogCreate';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
+import MusicCreate from './crud/MusicCreate'
 
 const useStyles = makeStyles((theme) => ({
     backdrop: {
@@ -30,10 +31,7 @@ function BackdropGenerator(props){
             return(
               <div>
               <Backdrop className={classes.backdrop} style={{background:'rgba(56, 142, 60, .5)' ,overflowY: 'auto'}} open={props.open}>
-              <CreateBlog/>
-                <IconButton onClick={props.setclose} style={{marginBottom:'auto',marginRight:'auto',margonTop:'10%'}}>
-                  <CloseIcon style={{color:'white'}} fontSize="large"/>
-                </IconButton>
+                <MusicCreate handlebackDrop={props.setclose}/>
               </Backdrop>
               </div>
             )

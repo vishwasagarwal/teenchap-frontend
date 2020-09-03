@@ -1,9 +1,8 @@
 import Layout from '../src/components/Layout';
-import FabButton from '../src/components/fab';
 const Index = () => {
     return(
-        <Layout>
-            <FabButton/>
+        <Layout TabValue={2}>
+            <h2>News</h2>
         </Layout>
     )
 }
